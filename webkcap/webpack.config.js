@@ -1,12 +1,20 @@
 const path = require("path");
+
+//generate html to dist folder
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+//clean old file
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
 module.exports = {
+    mode: 'development',
     entry: {
         app: "./src/index.js",
         print: "./src/print.js"
     },
+    devtool: 'inline-source-map', // If an error originates from b.js, the source map will tell you exactly that. (not for production)
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: "Output Management"
         }),
