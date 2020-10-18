@@ -9,8 +9,9 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        app: "./src/index.js",
-        print: "./src/print.js"
+        index: { import: './src/index.js', dependOn: 'shared' },
+        another: { import: './src/another-module.js', dependOn: 'shared' },
+        shared: 'lodash',
     },
     devtool: 'inline-source-map', // If an error originates from b.js, the source map will tell you exactly that. (not for production)
     devServer: {
@@ -26,5 +27,10 @@ module.exports = {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
         publicPath: '/',
+    },
+    optimization: {
+        splitChunks: {
+            chunks: 'all',
+        },
     },
 }
