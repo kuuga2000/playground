@@ -1,11 +1,12 @@
-async function getComponent() {
-    return import("lodash").then(({ default: _ }) => {
-        const element = document.createElement("div");
-        element.innerHTML = _.join(["xHello", "Webpackxx"], " ");
-        return element;
-    }).catch(error=>"An error occurred while loading the component");
-}
+import _ from 'lodash';
+import printMe from './print.js';
 
-getComponent().then(component => {
-    document.body.appendChild(component);
-})
+if ('serviceWorker' in navigator) {
+ window.addEventListener('load', () => {
+   navigator.serviceWorker.register('/service-worker.js').then(registration => {
+     console.log('SW registered: ', registration);
+   }).catch(registrationError => {
+     console.log('SW registration failed: ', registrationError);
+   });
+ });
+}
