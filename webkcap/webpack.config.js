@@ -13,8 +13,11 @@ module.exports = {
         print: "./src/print.js"
     },
     devtool: 'inline-source-map', // If an error originates from b.js, the source map will tell you exactly that. (not for production)
+    devServer: {
+        contentBase: './dist',
+    },
     plugins: [
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
             title: "Output Management"
         }),
@@ -22,5 +25,6 @@ module.exports = {
     output: {
         filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist"),
+        publicPath: '/',
     },
 }
