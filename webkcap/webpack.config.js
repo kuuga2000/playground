@@ -6,6 +6,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 //clean old file
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const WorkboxPlugin = require('workbox-webpack-plugin');
+
 module.exports = {
     mode: 'development',
     entry: {
@@ -18,7 +20,13 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
         new HtmlWebpackPlugin({
-            title: "Output Management"
+            title: 'Progressive Web Application',
+        }),
+        new WorkboxPlugin.GenerateSW({
+            // these options encourage the ServiceWorkers to get in there fast
+            // and not allow any straggling "old" SWs to hang around
+            clientsClaim: true,
+            skipWaiting: true,
         }),
     ],
     output: {
