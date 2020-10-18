@@ -9,8 +9,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        app: "./src/index.js",
-        print: "./src/print.js"
+        index: './src/index.js',
     },
     devtool: 'inline-source-map', // If an error originates from b.js, the source map will tell you exactly that. (not for production)
     devServer: {
