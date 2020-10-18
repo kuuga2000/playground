@@ -10,11 +10,11 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
     },
     plugins: [
-      new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-      new HtmlWebpackPlugin({
-          template: "./src/index.html",
-          title: "Happy Learning!"
-      }),
+        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+        new HtmlWebpackPlugin({
+            template: "./src/index.html",
+            title: "Happy Learning!"
+        }),
     ],
     resolve: {
         modules: [__dirname, "src", "node_modules"],
