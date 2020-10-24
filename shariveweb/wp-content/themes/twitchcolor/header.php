@@ -22,18 +22,25 @@
 	<meta name="description" content="Premium High Quality and Responsive Modern HTML5 CV and Resume Template." />
 	<meta name="author" content="rex_q" />
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/twitchcolor/assets/icons/favicon.png">
 	<?php wp_head() ?>
 </head>
 <!-- START OF Home [index.html] Page -->
 
 <body data-spy="scroll" data-target="#navbar-top" data-offset="50">
 	<!-- Home -[index.html]- page • TOP Navbar -->
-	<nav id="navbar-top" class="navbar navbar-expand-lg navbar-dark bg-black fixed-top navbar-page">
+	<nav id="navbar-top" class="navbar navbar-expand-lg twitch-dark-default fixed-top navbar-page">
 		<div class="container">
-			<a class="navbar-brand" href="#">
-				<img src="assets/icons/logo.svg" height="45" class="mr-2" alt="logo" />
-				<b>TechLead</b> <span class="text-primary font-weight-bolder">CV</span>
+			<a class="navbar-brand" href="/">
+                <?php 
+                if(function_exists("the_custom_logo")) {
+                    //the_custom_logo();
+                    $custom_logo_id = get_theme_mod("custom_logo");
+                    $logo = wp_get_attachment_image_src($custom_logo_id);
+                }
+                ?>
+                <img src="<?= $logo[0] ?>" height="45" width="45" class="mr-2" alt="logo" />
+				<b class="text-white"><?= get_bloginfo("name") ?></b> <span class="text-primary font-weight-bolder"></span>
 			</a>
 			<!-- /.navbar-brand -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +49,16 @@
 			<!-- /.navbar-toggler -->
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <?php 
+                /*wp_nav_menu(
+                    array(
+                        "menu" => "primary",
+                        "container" => "",
+                        "theme_location" => "primary",
+                        "items_wrap" => '<ul class="navbar-nav mx-auto">%3$s</ul>',
+                    )
+                );*/
+                ?>
 				<ul class="navbar-nav mx-auto">
 					<li class="nav-item">
 						<a class="nav-link smooth-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
@@ -71,7 +88,7 @@
 				<!-- /.navbar-nav mx-auto -->
 			</div>
 			<!-- /.collapse navbar-collapse -->
-			<a class="btn btn-lg rounded-lg btn-primary d-none d-md-block" href="#">
+			<a class="btn btn-lg rounded-lg twitch-purple-default d-none d-md-block" href="#">
 				<i class="fa fa-file-pdf mr-2"></i>
 				Download CV
 			</a>
@@ -81,4 +98,4 @@
 	</nav>
 	<!-- #navbar-top.navbar navbar-expand-lg navbar-dark bg-black fixed-top navbar-page -->
 
-	<!-- /EOF: Home [index.html] page • TOP Navbar -->
+    <!-- /EOF: Home [index.html] page • TOP Navbar -->

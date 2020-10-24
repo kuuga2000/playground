@@ -1,7 +1,7 @@
 <?php get_header() ?>
 <!-- Home page • MAIN -->
 <main>
-	<div id="home" class="bg-black pt-navbar-page text-white position-relative overflow-hidden">
+	<div id="home" class="twitch-dark-default pt-navbar-page text-white position-relative overflow-hidden">
 		<div class="pt-xl-8 pb-xl-8 pt-lg-8 pb-lg-8 pt-md-6 pb-md-8 pt-3 pb-6">
 			<div class="container">
 				<div class="row">
@@ -16,11 +16,11 @@
 						<!-- /.font-weight-light h4 animated fadeIn -->
 						<div class="row mt-xl-5 mt-lg-4 mt-md-4 mt-4">
 							<div class="col">
-								<a href="#" class="btn btn-lg mb-4 animated slideInDown mb-md-0 rounded-lg btn-primary shadow-sm" data-toggle="tooltip" data-placement="bottom" title="Download Curriculum Vitae.">
+								<a href="#" class="btn btn-lg mb-4 animated slideInDown mb-md-0 rounded-lg twitch-purple-default shadow-sm" data-toggle="tooltip" data-placement="bottom" title="Download Curriculum Vitae.">
 									<i class="fa fa-file-pdf mr-2"></i>
 									Download CV
 								</a>
-								<a href="#" class="btn d-none d-lg-inline-block animated delay-100ms slideInUp  btn-lg ml-2 rounded-lg btn-outline-primary shadow-sm" data-toggle="tooltip" data-placement="bottom" title="Contact Me.">
+								<a href="#" class="btn d-none d-lg-inline-block animated delay-100ms slideInUp  btn-lg ml-2 rounded-lg btn-twitch-purple-outline shadow-sm" data-toggle="tooltip" data-placement="bottom" title="Contact Me.">
 									<i class="fa fa-phone mr-2"></i>
 									Contact
 								</a>
@@ -46,7 +46,7 @@
 					</div>
 					<!-- /.col-md-7 order-md-0 order-1 text-center text-md-left -->
 					<div class="col-xl-4 offset-xl-1 col-lg-4 offset-lg-1 col-md-5 align-items-center d-flex justify-content-center order-md-1 order-0">
-						<img class="rounded-circle mb-5 mb-md-0 img-fluid" alt="image alt" src="assets/imgs/demo-user-05.jpg" />
+						<img class="rounded-circle mb-5 mb-md-0 img-fluid" alt="image alt" src="/wp-content/themes/twitchcolor/assets/imgs/demo-user-05.jpg" />
 					</div>
 					<!-- /.col-md-4 offset-md-1 order-md-1 order-0 -->
 				</div>
@@ -441,6 +441,7 @@
 					<div class="h2 mb-xl-4 mb-lg-4 mb-md-3 mb-3 text-center text-uppercase font-weight-bold mb-4">Portfolio</div>
 				</div>
 			</div>
+			<?php /*
 			<!-- Portfolio Item Row Start -->
 			<div class="row mb-xl-5 mb-lg-4 mb-md-3 mb-3">
 				<div class="col-lg-12 col-sm-12 portfolio-filter">
@@ -454,10 +455,11 @@
 				</div>
 			</div>
 			<!-- Portfolio Item Row Start -->
+			*/ ?>
 			<div class="row portfolio-items">
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 web ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-01.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-01.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">web</small>
 							<h4 class="font-weight-bold mb-1">
@@ -469,7 +471,7 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 web ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-02.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-02.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">web</small>
 							<h4 class="font-weight-bold mb-1">
@@ -481,7 +483,7 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 web ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-03.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-03.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">web</small>
 							<h4 class="font-weight-bold mb-1">
@@ -493,7 +495,7 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 web ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-04.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-04.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">web</small>
 							<h4 class="font-weight-bold mb-1">
@@ -505,7 +507,7 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 brand ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-05.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-05.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">brand</small>
 							<h4 class="font-weight-bold mb-1">
@@ -517,7 +519,7 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 design ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-01.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-02.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">design</small>
 							<h4 class="font-weight-bold mb-1">
@@ -529,19 +531,7 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 design ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-02.jpg" alt="Project Name for ">
-						<figcaption class="mt-2">
-							<small class="text-black-50 text-capitalize">design</small>
-							<h4 class="font-weight-bold mb-1">
-								Project Name
-
-							</h4>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 design ">
-					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-03.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-03.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">design</small>
 							<h4 class="font-weight-bold mb-1">
@@ -553,21 +543,9 @@
 				</div>
 				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 graphic ">
 					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-04.jpg" alt="Project Name for ">
+						<img class="card-img" src="/wp-content/themes/twitchcolor/assets/imgs/demo-work-04.jpg" alt="Project Name for ">
 						<figcaption class="mt-2">
 							<small class="text-black-50 text-capitalize">graphic</small>
-							<h4 class="font-weight-bold mb-1">
-								Project Name
-
-							</h4>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="item col-xl-3 col-lg-4 col-sm-6 hover-effect-2 design ">
-					<figure>
-						<img class="card-img" src="assets/imgs/demo-work-05.jpg" alt="Project Name for ">
-						<figcaption class="mt-2">
-							<small class="text-black-50 text-capitalize">design</small>
 							<h4 class="font-weight-bold mb-1">
 								Project Name
 
@@ -580,54 +558,34 @@
 	</div>
 	<!-- /.bg-gray pt-xl-8 pt-lg-6 pt-md-5 pt-4 pb-xl-8 pb-lg-6 pb-md-5 pb-4-->
 	<!-- EOF-Section portfolio -->
-	<div id="blog" class=" position-relative overflow-hidden">
+	<div id="blog" class=" position-relative overflow-hidden posts-view">
 		<div class="pt-xl-8 pt-lg-6 pt-md-5 pt-4 pb-xl-8 pb-lg-6 pb-md-5 pb-4">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<div class="h2 mb-xl-4 mb-lg-4 mb-md-3 mb-3  text-uppercase font-weight-bold mb-4">Latest Blog</div>
+						<div class="h2 mb-xl-4 mb-lg-4 mb-md-3 mb-3  text-uppercase font-weight-bold mb-4">
+							Latest Blog <a class="blog-link" href="/blog">#Read More>></a>
+						</div>
 					</div>
 				</div>
 				<div class="row">
+					<?php 
+					$posts = get_posts('post_type=post'); 
+					foreach($posts as $post) { 
+						setup_postdata( $post );
+					?>
 					<div class="col-xl-4 col-lg-4 col-md-6">
 						<div class="card mb-xl-0 mb-lg-4 mb-md-2 mb-1 border-0 rounded-0">
-							<img src="assets/imgs/demo-blog-01.jpg" class="img-fluid" alt="...">
+							<a href="<?= the_permalink() ?>"><img src="<?=the_post_thumbnail_url("medium") ?>" class="img-fluid" alt="..."></a>
 							<div class="card-body px-0">
-								<h4 class="card-title h4">Why I Switched to Sketch For UI Design</h4>
+								<a href="<?= the_permalink() ?>" class="card-title h4"><?=the_title() ?></a>
 								<p class="card-text">
-									This is a wider card with supporting text below as a natural lead-in to
-									additional content. This content is a little bit longer.
+									<?= wp_trim_words(get_the_content(),30,"...") ?>
 								</p>
 							</div>
 						</div>
 					</div>
-					<!-- /.col-xl-4 col-lg-4 col-md-6 -->
-					<div class="col-xl-4 col-lg-4 col-md-6">
-						<div class="card mb-xl-0 mb-lg-4 mb-md-2 mb-1 border-0 rounded-0">
-							<img src="assets/imgs/demo-blog-02.png" class="img-fluid" alt="...">
-							<div class="card-body px-0">
-								<h4 class="card-title h4">Best No-Code Application Development Platform</h4>
-								<p class="card-text">
-									This is a wider card with supporting text below as a natural lead-in to
-									additional content. This content is a little bit longer.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- /.col-xl-4 col-lg-4 col-md-6 -->
-					<div class="col-xl-4 col-lg-4 col-md-6">
-						<div class="card mb-xl-0 mb-lg-4 mb-md-2 mb-1 border-0 rounded-0">
-							<img src="assets/imgs/demo-blog-03.png" class="img-fluid" alt="...">
-							<div class="card-body px-0">
-								<h4 class="card-title h4">Inspiration: 7 Examples of User-Focused Design</h4>
-								<p class="card-text">
-									This is a wider card with supporting text below as a natural lead-in to
-									additional content. This content is a little bit longer.
-								</p>
-							</div>
-						</div>
-					</div>
-					<!-- /.col-xl-4 col-lg-4 col-md-6 -->
+					<?php } ?>
 				</div>
 			</div>
 		</div>

@@ -2,3 +2,51 @@
 Theme Name : Twitch Color
 Version : 1.0
 */
+.twitch-purple-text {
+    color:#651fff;;
+}
+.twitch-purple-default {
+    background-color: #651fff;
+}
+.twitch-dark-default {
+    background-color: #0e0e10;
+}
+.twitch-purple-default a,
+.twitch-dark-default a {
+    color:#ffffff;
+    font-weight: 700;
+}
+.btn-twitch-purple-outline {
+    border:solid 2px #651fff;
+    color: #651fff;
+}
+.btn-twitch-purple-outline:hover {
+    color: #ffffff;
+    background-color: #651fff;
+    border-color: #651fff;
+}
+.navbar-page .navbar-nav .active,
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus,
+.nav-link:hover, .nav-link:focus {
+    color:#ffffff !important;
+    text-decoration: underline !important;
+}
+.blog-link {position: relative;}
+.blog-link::before {
+    content: "";
+    background-color: #000000;
+    width: 1px;
+    position: absolute;
+}
+
+.post-date {text-align: right;}
+.post-view h1 {
+    margin: 20px 0;
+}
+.post-view h1,
+.post-view h2
+{text-align: left;}
+.post-view p {text-align: justify;}
+.posts-view a.card-title{color: #000000;}
+.posts-view .card-text {text-align: justify;}
+.posts-view .card-text p {margin-bottom: 0;}

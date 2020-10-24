@@ -1,7 +1,17 @@
 <?php
 
-function theme_support() {
+function twitchcolor_support() {
     add_theme_support("title-tag");
+    add_theme_support("custom-logo");
+    add_theme_support("post-thumbnails");
+}
+
+function twitchcolor_menus() {
+    $locations = array (
+        "primary" => "Primary Menu (Header)",
+        "footer" => "Footer Menu"
+    );
+    register_nav_menus($locations);
 }
 
 function twitchcolor_styles() {
@@ -37,6 +47,8 @@ function twitchcolor_javascripts() {
         wp_enqueue_script("loadjs{$index}", ($index == 8 ? $load_js : get_template_directory_uri(). $load_js), array(), $version, true);
     }
 }
+
 add_action("wp_enqueue_scripts", "twitchcolor_styles");
 add_action("wp_enqueue_scripts", "twitchcolor_javascripts");
-add_action("after_setup_theme","theme_support");
+add_action("after_setup_theme", "twitchcolor_support");
+add_action("init","twitchcolor_menus");
