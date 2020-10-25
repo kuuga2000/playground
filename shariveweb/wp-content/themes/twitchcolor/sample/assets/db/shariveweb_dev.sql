@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2020 at 01:46 PM
+-- Generation Time: Oct 25, 2020 at 01:49 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -282,7 +282,7 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (2, 3, '_wp_page_template', 'default'),
 (3, 2, '_edit_lock', '1603533634:1'),
 (4, 5, '_edit_lock', '1603534457:1'),
-(5, 9, '_edit_lock', '1603629882:1'),
+(5, 9, '_edit_lock', '1603630002:1'),
 (6, 11, '_edit_lock', '1603538671:1'),
 (7, 13, '_edit_lock', '1603538688:1'),
 (8, 15, '_edit_lock', '1603538712:1'),
