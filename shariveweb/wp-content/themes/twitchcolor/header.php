@@ -22,7 +22,7 @@
 	<meta name="description" content="Premium High Quality and Responsive Modern HTML5 CV and Resume Template." />
 	<meta name="author" content="rex_q" />
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/wp-content/themes/twitchcolor/assets/icons/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="/wp-content/uploads/2020/10/favicon.png">
 	<?php wp_head() ?>
 </head>
 <!-- START OF Home [index.html] Page -->
@@ -40,7 +40,7 @@
                 }
                 ?>
                 <img src="<?= $logo[0] ?>" height="45" width="45" class="mr-2" alt="logo" />
-				<b class="text-white"><?= get_bloginfo("name") ?></b> <span class="text-primary font-weight-bolder"></span>
+				<b class="text-white">The</b> <span class="zecter-red-text font-weight-bolder"><?= get_bloginfo("name") ?></span>
 			</a>
 			<!-- /.navbar-brand -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
