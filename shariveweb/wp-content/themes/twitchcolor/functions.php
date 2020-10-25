@@ -28,6 +28,19 @@ function twitchcolor_styles() {
     }
 }
 
+function my_header_scripts() {
+    echo "
+    <script>
+    function alter_nav_link(className) {
+        var nav_link = document.getElementsByClassName(className);
+        for (var i=0; i<nav_link.length; i++) {
+            nav_link[i].href = \"/\" + nav_link[i].getAttribute(\"href\");
+        }
+    }
+    </script>
+    ";
+}
+
 function twitchcolor_javascripts() {
     $version = wp_get_theme()->get("Version");
     $javascripts = array(
@@ -41,7 +54,7 @@ function twitchcolor_javascripts() {
         "https://maps.google.com/maps/api/js?sensor=false",
         "/assets/js/main.js"
     );
-   
+
     foreach($javascripts as $index => $load_js) {
         $index++;
         wp_enqueue_script("loadjs{$index}", ($index == 8 ? $load_js : get_template_directory_uri(). $load_js), array(), $version, true);
@@ -49,6 +62,7 @@ function twitchcolor_javascripts() {
 }
 
 add_action("wp_enqueue_scripts", "twitchcolor_styles");
+add_action('wp_head', 'my_header_scripts');
 add_action("wp_enqueue_scripts", "twitchcolor_javascripts");
 add_action("after_setup_theme", "twitchcolor_support");
 add_action("init","twitchcolor_menus");

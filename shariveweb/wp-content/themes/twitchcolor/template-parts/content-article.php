@@ -20,4 +20,5 @@
         </div>
     </div>
 </div>
+<script>alter_nav_link("nav-link");</script>
 <?php get_footer() ?>

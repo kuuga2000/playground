@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-auto text-center">
-                    <img class="logo-sm" src="/wp-content/themes/twitchcolor/assets/icons/favicon.png" width="50" alt="Logo">
+                    <img class="logo-sm" src="/wp-content/uploads/2020/10/favicon.png" width="50" alt="Logo">
                     © <?= date("Y") ?> All rights reserved.
                 </div>
             </div>

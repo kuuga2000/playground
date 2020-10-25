@@ -32,7 +32,7 @@
 	<nav id="navbar-top" class="navbar navbar-expand-lg twitch-dark-default fixed-top navbar-page">
 		<div class="container">
 			<a class="navbar-brand" href="/">
-                <?php 
+                <?php
                 if(function_exists("the_custom_logo")) {
                     //the_custom_logo();
                     $custom_logo_id = get_theme_mod("custom_logo");
@@ -49,7 +49,7 @@
 			<!-- /.navbar-toggler -->
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <?php 
+                <?php
                 /*wp_nav_menu(
                     array(
                         "menu" => "primary",
