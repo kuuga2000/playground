@@ -1,7 +1,12 @@
-import generateJoke from "./generateJoke";
 import './styles/main.scss';
-import rider from './assets/1.jpg';
 
-const riderImg = document.getElementById('rider');
-generateJoke();
-riderImg.src = rider;
+import App from './App.svelte';
+
+const app = new App({
+	target: document.body,
+	props: {
+		name: 'world'
+	}
+});
+
+export default app;
