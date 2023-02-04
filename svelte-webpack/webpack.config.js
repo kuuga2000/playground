@@ -30,7 +30,7 @@ module.exports = {
         static: {
             directory: path.resolve(__dirname, 'dist')
         },
-        port: 4000,
+        port: 3001,
         open: true,
         hot: true,
         compress: true,
@@ -91,6 +91,10 @@ module.exports = {
     },
     mode,
 	plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webpack App Title xxx',
+            filename: 'index.html',
+        }),
 		new MiniCssExtractPlugin({
 			filename: '[name][contenthash].css'
 		})
