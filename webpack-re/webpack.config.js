@@ -1,6 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
+const glob = require("glob");
+const PATHS = {
+    src: path.join(__dirname, "src"),
+  };
+
 
 module.exports = {
     mode: 'development',
@@ -56,6 +62,9 @@ module.exports = {
             filename: 'index.html',
             template: 'src/template.html'
         }),
-        new BundleAnalyzerPlugin()
+        new BundleAnalyzerPlugin(),
+        new PurgeCSSPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+        }),
     ]
 }
