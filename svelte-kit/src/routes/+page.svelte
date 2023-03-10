@@ -10,6 +10,7 @@
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi pariatur neque dolores nemo, cumque eius, ipsum numquam amet similique voluptate et sunt, odio deleniti provident. Maxime odit iste modi laboriosam.
     </p>
     <button on:click={updateTitle}>Change Title</button>
+    <input type="text" name="" id="" bind:value={title}>
 </div>
 <style>
     .index {
