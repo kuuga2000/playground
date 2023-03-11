@@ -2,10 +2,15 @@
   import svelteLogo from "./assets/svelte.svg";
   import Loop from "./walkthrough/components/Loop.svelte";
   import Modal from "./walkthrough/components/Modal.svelte";
-</script>
 
+  let showModal = false;
+  const toggleModal = () => {
+    showModal = !showModal;
+  }
+</script>
 <main>
   <div>
+
     <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
       <img src="/vite.svg" class="logo" alt="Vite Logo" />
     </a>
@@ -19,7 +24,9 @@
   </div>
 </main>
 <!--<Modal message="Test" isPromo={true} />-->
-<Modal message="Test" />
+<Modal message="Test" {showModal} isPromo={true} closeModal={toggleModal} />
+<button on:click={toggleModal}>Show Modal</button>
+
 <style>
   .logo {
     height: 6em;
