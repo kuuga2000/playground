@@ -18,19 +18,23 @@
 </script>
 
 <main>
-    {#each people as person (person.id)}
-        <div>
-            <h2>#{person.id} {person.name}</h2>
-            <div>{person.job}</div>
+    {#if people.length > 0}
+        {#each people as person (person.id)}
             <div>
-                <button
-                    on:click={() => {
-                        remove(person.id);
-                    }}>Delete</button
-                >
+                <h2>#{person.id} {person.name}</h2>
+                <div>{person.job}</div>
+                <div>
+                    <button
+                        on:click={() => {
+                            remove(person.id);
+                        }}>Delete</button
+                    >
+                </div>
             </div>
-        </div>
+        {:else}
+            <div>No data to show...</div>
+        {/each}
     {:else}
-        <div>No data to show...</div>
-    {/each}
+        <div>No data...</div>
+    {/if}
 </main>
