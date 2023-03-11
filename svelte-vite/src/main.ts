@@ -1,8 +1,8 @@
 import './app.css'
 import App from './App.svelte'
-import Walkthrough from './walkthrough/components/Event.svelte';
+import Loop from './Loop.svelte';
 
-const app = new App({
+const app = new Loop({
   target: document.getElementById('app'),
 })
 
