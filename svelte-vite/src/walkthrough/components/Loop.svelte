@@ -27,8 +27,7 @@
                     <button
                         on:click={() => {
                             remove(person.id);
-                        }}>Delete</button
-                    >
+                        }}>Delete</button>
                 </div>
             </div>
         {:else}

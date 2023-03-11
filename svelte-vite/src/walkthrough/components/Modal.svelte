@@ -8,7 +8,8 @@
 
 </div>
 {#if showModal}
-  <div class="backdrop" class:promo={isPromo}>
+  <!-- svelte-ignore a11y-click-events-have-key-events -->
+  <div class="backdrop" class:promo={isPromo} on:click|self={closeModal}>
     <button on:click={closeModal}>Close</button>
     <div class="modal">
       <p>Sign up for offers!</p>

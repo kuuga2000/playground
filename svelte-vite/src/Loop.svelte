@@ -25,6 +25,7 @@
 </main>
 <!--<Modal message="Test" isPromo={true} />-->
 <Modal message="Test" {showModal} isPromo={true} closeModal={toggleModal} />
+<!--<button on:click|once={toggleModal}>Show Modal</button>-->
 <button on:click={toggleModal}>Show Modal</button>
 
 <style>
