@@ -18,7 +18,8 @@
     <Loop />
   </div>
 </main>
-<Modal />
+<!--<Modal message="Test" isPromo={true} />-->
+<Modal message="Test" />
 <style>
   .logo {
     height: 6em;
