@@ -13,7 +13,8 @@
     <button on:click={closeModal}>Close</button>
     <div class="modal">
       <p>Sign up for offers!</p>
-      {message}
+      <slot name="form-title" />
+      <slot></slot>
     </div>
   </div>
 {/if}

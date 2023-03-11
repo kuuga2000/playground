@@ -24,7 +24,15 @@
   </div>
 </main>
 <!--<Modal message="Test" isPromo={true} />-->
-<Modal message="Test" {showModal} isPromo={true} closeModal={toggleModal} />
+<Modal message="Test" {showModal} isPromo={true} closeModal={toggleModal}>
+
+  <h2 slot="form-title">Add People Job</h2>
+  <label>Name</label>
+  <div><input type="text" /></div>
+  <label>Job</label>
+  <div><input type="text" /></div>
+  <button>Submit</button>
+</Modal>
 <!--<button on:click|once={toggleModal}>Show Modal</button>-->
 <button on:click={toggleModal}>Show Modal</button>
 
