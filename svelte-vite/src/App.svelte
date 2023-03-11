@@ -1,6 +1,7 @@
 <script lang="ts">
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
+  import Event from './walkthrough/components/Event.svelte'
 </script>
 
 <main>
@@ -15,7 +16,11 @@
   <h1>Vite + Svelte</h1>
 
   <div class="card">
-    <Counter />sdasd
+    <Counter />
+  </div>
+
+  <div class="card">
+    <Event />
   </div>
 
   <p>
