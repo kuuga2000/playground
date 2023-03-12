@@ -1,4 +1,5 @@
 <script lang="ts">
+  import PersonForm from "./PersonForm.svelte";
   export let showModal = false;
   export let isPromo = false;
   export let message;
@@ -13,8 +14,9 @@
     <button on:click={closeModal}>Close</button>
     <div class="modal">
       <p>Sign up for offers!</p>
-      <slot name="form-title" />
-      <slot></slot>
+      <PersonForm>
+        <h3 slot="title">Add New Person</h3>
+      </PersonForm>
     </div>
   </div>
 {/if}
