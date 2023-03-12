@@ -1,7 +1,8 @@
 <script lang="ts">
   import Footer from "./components/Footer.svelte";
   import Header from "./components/Header.svelte";
-  import Tab from "./components/Tab.svelte";
+  import PollForm from "./components/PollForm.svelte";
+  import Tabs from "./components/Tabs.svelte";
 
   let items = ["Current Polls", "Add New Poll"];
   let activeItem = "Current Polls";
@@ -12,11 +13,11 @@
 
 <Header />
 <main>
-  <Tab activeItem={activeItem} items={items} on:tabChange={tabChange} />
-  {#if activeItem === 'Current Polls'}
-  sd
+  <Tabs {activeItem} {items} on:tabChange={tabChange} />
+  {#if activeItem === "Current Polls"}
+    sd
   {:else}
-  xx
+    <PollForm />
   {/if}
 </main>
 <Footer />

@@ -9,5 +9,6 @@
         display: inline-block;
         padding: 20px;
         border-top: solid 1px #ddd;
+        margin-top: 30px;
     }
 </style>
