@@ -1,5 +1,6 @@
 <script lang="ts">
-    export let newData;
+    import Modal from "./Modal.svelte";
+    let showModal = false;
     let people = [
         {
             id: 1,
@@ -16,17 +17,23 @@
             skill: "a",
         },
     ];
+    let peopleCount = people[people.length-1].id;
 
+    const toggleModal = () => {
+        showModal = !showModal;
+    };
     const remove = (id) => {
         people = people.filter((person) => person.id != id);
     };
-    const removeNewData = (id) => {
-        newData = newData.filter((newData) => newData.id != id);
+    const addNewPersonData = (event) => {
+        peopleCount += 1;
+        event.detail.id = peopleCount
+        people = [event.detail, ...people];
     };
 </script>
 
 <main>
-    {#if people.length > 0 || newData.length > 0}
+    {#if people.length > 0}
         {#each people as person}
             <div>
                 <strong>{person.id}</strong>
@@ -43,25 +50,15 @@
                 </div>
             </div>
         {/each}
-
-        {#each newData as person}
-            <div>
-                <strong>{person.id}</strong>
-                <strong>{person.name}</strong>
-                <div>{person.job}</div>
-                <div>{person.skill}</div>
-                <div>{person.age} years old</div>
-                <div>
-                    <button
-                        on:click={() => {
-                            removeNewData(person.id);
-                        }}>Delete</button
-                    >
-                </div>
-            </div>
-        {/each}
-
     {:else}
         <div>No data...</div>
     {/if}
 </main>
+<Modal
+    message="& get 10% discount"
+    {showModal}
+    isPromo={true}
+    closeModal={toggleModal}
+    on:newPersonData={addNewPersonData}
+/>
+<button on:click={toggleModal}>Show Modal</button>

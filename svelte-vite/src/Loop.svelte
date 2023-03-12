@@ -1,21 +1,6 @@
 <script lang="ts">
   import svelteLogo from "./assets/svelte.svg";
   import Loop from "./walkthrough/components/Loop.svelte";
-  import Modal from "./walkthrough/components/Modal.svelte";
-  import { createEventDispatcher } from "svelte";
-
-  let dispatch = createEventDispatcher();
-  let showModal = false;
-  let exportNewPersonData = [];
-  const toggleModal = () => {
-    showModal = !showModal;
-  };
-
-  let x = 1;
-
-  const addNewPersonData = (event) => {
-    exportNewPersonData = [event.detail, ...exportNewPersonData];
-  };
 </script>
 
 <main>
@@ -29,20 +14,19 @@
   </div>
   <h1>Vite + Svelte</h1>
   <div class="card">
-    <Loop newData={exportNewPersonData} />
+    <Loop />
   </div>
 </main>
 <!--<Modal message="Test" isPromo={true} />-->
-<Modal
+<!--<Modal
   message="Test"
   {showModal}
   isPromo={true}
   closeModal={toggleModal}
   on:newPersonData={addNewPersonData}
-/>
-<!--<button on:click|once={toggleModal}>Show Modal</button>-->
-<button on:click={toggleModal}>Show Modal</button>
+/>-->
 
+<!--<button on:click|once={toggleModal}>Show Modal</button>-->
 <style>
   .logo {
     height: 6em;

@@ -9,19 +9,18 @@
   export let newPersonData;
 
   const addPerson = (event) => {
-    newPersonData = (event.detail);
-    dispatch('newPersonData', newPersonData);
-  }
+    newPersonData = event.detail;
+    dispatch("newPersonData", newPersonData);
+  };
 </script>
-<div>
 
-</div>
+<div />
 {#if showModal}
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <div class="backdrop" class:promo={isPromo} on:click|self={closeModal}>
     <button on:click={closeModal}>Close</button>
     <div class="modal">
-      <p>Sign up for offers!</p>
+      <p>Sign up for offers! {message}</p>
       <PersonForm on:addPerson={addPerson}>
         <h3 slot="title">Add New Person</h3>
       </PersonForm>

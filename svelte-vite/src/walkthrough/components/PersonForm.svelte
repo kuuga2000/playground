@@ -8,7 +8,7 @@
     const handleSubmit = () => {
         let skill = skills.length ? skills.join(", ") : "no skill";
         const person = {
-            id:Math.random(),
+            id: Math.random(),
             name,
             job,
             skill,
