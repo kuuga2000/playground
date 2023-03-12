@@ -1,9 +1,17 @@
 <script lang="ts">
+  import { createEventDispatcher } from "svelte";
   import PersonForm from "./PersonForm.svelte";
+  let dispatch = createEventDispatcher();
   export let showModal = false;
   export let isPromo = false;
   export let message;
   export let closeModal;
+  export let newPersonData;
+
+  const addPerson = (event) => {
+    newPersonData = (event.detail);
+    dispatch('newPersonData', newPersonData);
+  }
 </script>
 <div>
 
@@ -14,7 +22,7 @@
     <button on:click={closeModal}>Close</button>
     <div class="modal">
       <p>Sign up for offers!</p>
-      <PersonForm>
+      <PersonForm on:addPerson={addPerson}>
         <h3 slot="title">Add New Person</h3>
       </PersonForm>
     </div>

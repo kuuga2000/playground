@@ -1,13 +1,21 @@
 <script lang="ts">
-    import { prevent_default } from "svelte/internal";
-
+    import { createEventDispatcher } from "svelte";
+    let dispatch = createEventDispatcher();
     let name;
     let job;
     let skills = [];
     let age;
     const handleSubmit = () => {
-        console.log(name, job, skills.join(', '), age);
-    }
+        let skill = skills.length ? skills.join(", ") : "no skill";
+        const person = {
+            id:Math.random(),
+            name,
+            job,
+            skill,
+            age,
+        };
+        dispatch("addPerson", person);
+    };
 </script>
 
 <slot name="title" />
@@ -24,9 +32,30 @@
     </div>
     <label>Skills</label>
     <div>
-        <input type="checkbox" name="" id="" bind:group={skills} value="Skill 1"> Skill 1 <br />
-        <input type="checkbox" name="" id="" bind:group={skills} value="Skill 2"> Skill 2 <br />
-        <input type="checkbox" name="" id="" bind:group={skills} value="Skill 3"> Skill 3 <br />
+        <input
+            type="checkbox"
+            name=""
+            id=""
+            bind:group={skills}
+            value="Skill 1"
+        />
+        Skill 1 <br />
+        <input
+            type="checkbox"
+            name=""
+            id=""
+            bind:group={skills}
+            value="Skill 2"
+        />
+        Skill 2 <br />
+        <input
+            type="checkbox"
+            name=""
+            id=""
+            bind:group={skills}
+            value="Skill 3"
+        />
+        Skill 3 <br />
     </div>
     <label>Age</label>
     <div><input type="number" size="5" bind:value={age} /></div>
