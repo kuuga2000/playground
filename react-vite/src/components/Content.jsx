@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react"
-import Helper from './Helper'
+import {Helper, callLogz} from './Helper'
 
 const Body = () => {
     const [name, setName] = useState('Kamen Rider')
@@ -9,8 +9,8 @@ const Body = () => {
     }
     const handleInput = (e) => {
         let value = e.target.value;
-        Helper.Helper.callParam(value)
-        Helper.callLogz(value)
+        Helper.callParam(value)
+        callLogz(value)
         setName(value)
     }
     const increaseNumber = () => {

@@ -1,4 +1,4 @@
-const Helper = {
+export const Helper = {
     callName: () => {
         console.log('ssssssssss')
     },
@@ -10,11 +10,6 @@ const Helper = {
     }
 }
 
-const callLogz = (value) => {
+export const callLogz = (value) => {
     console.log(value)
-}
-
-export default {
-    Helper,
-    callLogz
 }
