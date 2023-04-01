@@ -25,9 +25,14 @@ const Heroes = () => {
     }
 
     useEffect(() => {
-        console.log('ss');
-        console.log(namex);
-    }, [namex]);
+        fetch('http://localhost:8000/blogs')
+            .then(res => {
+                return res.json()
+            })
+            .then(data => {
+                setHeroes(data)
+            })
+    }, []);
 
     return (
         <Fragment>

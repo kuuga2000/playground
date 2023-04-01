@@ -1,1 +1,3 @@
 npx json-server --watch data/db.json --port 8000
+
+https://blog.bitsrc.io/react-v18-0-useeffect-bug-why-do-effects-run-twice-39babecede93
