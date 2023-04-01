@@ -1,6 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import HeroList from './HeroList'
+import { Fragment } from 'react';
 const Heroes = () => {
+    const [namex, setNamex] = useState('Bloodseekerx');
     const [heroes, setHeroes] = useState([
         {
             id: 1, name: 'Bloodseeker', skill: 'Bloodrite', ult: 'Rupture'
@@ -15,10 +17,25 @@ const Heroes = () => {
 
     const remove = (id) => {
         setHeroes((heroes) => heroes.filter(hero => hero.id !== id))
-    };
+    }
+
+    const aa = () => {
+        setNamex('Anti Mage');
+        console.log(namex + ' xs');
+    }
+
+    useEffect(() => {
+        console.log('ss');
+        console.log(namex);
+    }, [namex]);
 
     return (
-        <HeroList heroes={heroes} btnRemove={remove} />
+        <Fragment>
+            <a href="#" onClick={() => {
+                aa()
+            }}>Change Name</a>
+            <HeroList heroes={heroes} btnRemove={remove} />
+        </Fragment>
     )
 }
 
