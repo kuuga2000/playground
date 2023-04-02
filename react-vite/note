@@ -1,3 +1,14 @@
 npx json-server --watch data/db.json --port 8000
 
 https://blog.bitsrc.io/react-v18-0-useeffect-bug-why-do-effects-run-twice-39babecede93
+https://github.com/public-apis/public-apis
+
+
+name-obfuscation css vite
+https://github.com/vitejs/vite/discussions/7447
+
+https://reactjsexample.com/minify-and-obfuscate-css-classes-in-production/
+https://github.com/kiosion/vite-plugin-class-mangler
+
+install react with webpack
+https://medium.com/@tharinduit16/react-18-with-webpack-5-project-setup-steps-a93b4e1aaa3b
