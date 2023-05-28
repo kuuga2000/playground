@@ -18,3 +18,123 @@ https://www.youtube.com/watch?v=X48Kt8rSByQ
 
 css generator class name
 https://github.com/kiosion/vite-plugin-class-mangler
+
+
+    rollupOptions: {
+      /*input: [
+        './src/logger.ts',
+        './src/math.ts'
+      ],*/
+      output: [
+        {
+          name: 'one',
+          dir: path.join(__dirname, 'dist/one'),
+        },
+        {
+          name: 'two',
+          dir: path.join(__dirname, 'dist/two'),
+        },
+      ],
+    },
+
+    import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { viteObfuscateFile } from 'vite-plugin-obfuscator'
+import path from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    react(),
+    viteObfuscateFile()
+  ],
+  build: {
+    rollupOptions: {
+      outDir: 'dist',
+      /*input: [
+        './src/logger.ts',
+        './src/math.ts'
+      ],*/
+      output: [
+        {
+          name: 'one',
+          dir: path.join(__dirname, 'dist/one'),
+        },
+        {
+          name: 'two',
+          dir: path.join(__dirname, 'dist/two'),
+        },
+      ],
+    },
+    lib : {
+      entry: [
+        './src/logger.ts',
+        './src/math.ts',
+      ]
+    },
+  },
+  /*
+  build: {
+    outDir: 'dist',
+    lib: {
+      entry: [
+        './src/logger.ts',
+        './src/math.ts',
+      ]
+    }
+  },*/
+})
+
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { viteObfuscateFile } from 'vite-plugin-obfuscator'
+import path from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  base: '',
+  root:'./',
+  build: {
+    emptyOutDir: false,
+    outDir: "dist",
+    sourcemap: false,
+    lib: {
+      formats: ["es"],
+      entry: {
+        mathx: "./src/math.ts",
+        loggerx: "./src/logger.ts",
+      },
+    },
+  },
+  plugins: [
+    react(),
+    viteObfuscateFile()
+  ],
+})
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { viteObfuscateFile } from 'vite-plugin-obfuscator'
+import path from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  base: '',
+  root:'./',
+  build: {
+    emptyOutDir: false,
+    outDir: "dist",
+    sourcemap: false,
+    lib: {
+      formats: ["es"],
+      entry: {
+        mathx: "./src/math.ts",
+        loggerx: "./src/logger.ts",
+      },
+    },
+  },
+  plugins: [
+    react(),
+    viteObfuscateFile()
+  ],
+})
