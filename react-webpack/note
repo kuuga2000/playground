@@ -1,0 +1,8 @@
+npm init --y
+npm i react-dom
+npm i react
+npm install -D typescript @types/react @types/react-dom
+npm install -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript
+
+npm install -D webpack webpack-cli webpack-dev-server html-webpack-plugin
+npm install -D babel-loader
