@@ -1,0 +1,7 @@
+npm create vite@latest
+Need to install the following packages:
+  create-vite@4.3.2
+Ok to proceed? (y) y
+√ Project name: ... react-vite-tsplay
+√ Select a framework: » React
+√ Select a variant: » TypeScript + SWC
