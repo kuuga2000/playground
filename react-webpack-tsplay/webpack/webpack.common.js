@@ -1,15 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
 module.exports = {
   //entry: path.resolve(__dirname, '..', './src/index.tsx'),
   entry: {
-    'category/category': {
-      import: path.resolve(__dirname, "..", "./src/index.tsx"),
+    'static/store/company/desktop/id_ID/company_purchased/purchased': {
+      import: path.resolve(__dirname, "..", "/app/design/frontend/company/default/company_purchased/purchased"),
       dependOn: "vendor/vendor",
     },
-    'product/product': {
-      import: path.resolve(__dirname, "..", "/src/product/index.tsx"),
+    'static/store/company/desktop/id_ID/company_customer/customer': {
+      import: path.resolve(__dirname, "..", "/app/design/frontend/company/default/company_customer/customer"),
       dependOn: "vendor/vendor",
     },
     'vendor/vendor': ["react", "react-dom"],
@@ -40,10 +41,17 @@ module.exports = {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/inline',
       },
+      {
+        test: /\.m?js/,
+        resolve:
+        {
+            fullySpecified: false
+        }
+      },
     ],
   },
   output: {
-    path: path.resolve(__dirname, '..', './build/'),
+    path: path.resolve(__dirname, '..', './pub/'),
     filename: '[name].js',
   },
   /*
@@ -52,7 +60,14 @@ module.exports = {
       template: path.resolve(__dirname, '..', './src/index.html'),
     }),
   ],*/
-  stats: 'errors-only',
+  plugins: [
+    //to remove licence LICENSE.txt file
+    new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['**/*.LICENSE.txt'],
+      protectWebpackAssets: false
+    })
+  ],
+  stats: 'errors-only'
 }
 /**
  * app: {
