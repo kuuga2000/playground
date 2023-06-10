@@ -1,9 +1,22 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
-const Entry = require('./entry')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+
 module.exports = {
-  entry: Entry,
+  //entry: Entry,
+  entry: {
+    purchased:{
+      import: path.resolve(__dirname, "..", "/app/design/frontend/company/default/company_purchased/purchased.tsx"),
+      filename: 'static/store/company/desktop/id_ID/company_purchased/[name].js',
+      dependOn: "vendor/vendor"
+    },
+    customer: {
+      import: path.resolve(__dirname, "..", "/app/design/frontend/company/default/company_customer/customer.tsx"),
+      filename: 'static/store/company/desktop/id_ID/company_customer/[name].js',
+      dependOn: "vendor/vendor"
+    },
+    'vendor/vendor': ["react", "react-dom"],
+  },
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -34,7 +47,7 @@ module.exports = {
         test: /\.m?js/,
         resolve:
         {
-            fullySpecified: false
+          fullySpecified: false
         }
       },
     ],
