@@ -4,7 +4,7 @@ const Customer = () => {
     return (
         <>
             <h1>Page:</h1>
-            <CustomerList name="Customer Page" />
+            <CustomerList name="This is Customer" />
         </>
     )
 }
