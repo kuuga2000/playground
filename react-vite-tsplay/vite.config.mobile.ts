@@ -12,12 +12,12 @@ export default defineConfig(({ command, mode }) => {
       rollupOptions: {
         // https://rollupjs.org/configuration-options/
         input: {
-          'Customer/customer': 'app/customer.tsx',
-          'Product/product': 'app/product.tsx'
+          'TheZecter_Customer/js/customer': `${env.mobileTsx}/TheZecter_Customer/customer.tsx`,
+          'TheZecter_Product/js/product': `${env.mobileTsx}/TheZecter_Product/product.tsx`
         },
         output: {
           dir: env.mobileTheme,
-          entryFileNames: 'Company_[name].js',
+          entryFileNames: `[name].js`,
         }
       }
     },
