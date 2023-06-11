@@ -5,3 +5,29 @@ Ok to proceed? (y) y
 √ Project name: ... react-vite-tsplay
 √ Select a framework: » React
 √ Select a variant: » TypeScript + SWC
+
+
+
+
+
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  build: {
+    rollupOptions: {
+      // https://rollupjs.org/configuration-options/
+      input: {
+        'Customer/customer': 'src/customer.tsx',
+        'Product/product': 'src/product.tsx'
+      },
+      output: {
+        dir:'pub',
+        entryFileNames: 'Company_[name].js'
+      }
+    }
+  },
+  plugins: [react()],
+})

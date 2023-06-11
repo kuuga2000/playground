@@ -1,26 +1,21 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import { viteObfuscateFile } from 'vite-plugin-obfuscator'
-import { resolve } from 'path'
-
+//import.meta.env.VITE_APP_TITLE
+ 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '',
-  root:'./',
   build: {
-    emptyOutDir: false,
-    outDir: "pub",
-    sourcemap: false,
-    lib: {
-      formats: ["es"],
-      entry: {
-        'static/store/company/desktop/id_ID/company_product/product':"./src/product.tsx",
-        'static/store/company/desktop/id_ID/company_customer/customer':"./src/customer.tsx",
+    rollupOptions: {
+      // https://rollupjs.org/configuration-options/
+      input: {
+        'Customer/customer': 'src/customer.tsx',
+        'Product/product': 'src/product.tsx'
       },
-    },
+      output: {
+        dir:'pub/static/store/company/desktop/id_ID',
+        entryFileNames: 'Company_[name].js',
+      }
+    }
   },
-  plugins: [
-    react(),
-    viteObfuscateFile()
-  ],
+  plugins: [react()],
 })
