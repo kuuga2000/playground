@@ -6,17 +6,18 @@ export default defineConfig(({ command, mode }) => {
   // Load env file based on `mode` in the current working directory.
   // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
   const env = loadEnv(mode, process.cwd(), '')
-  console.log(env.mobileTheme);
+  const mobileTsx = env.mobileTsx;
+  const mobileTheme = env.mobileTheme;
   return {
     build: {
       rollupOptions: {
         // https://rollupjs.org/configuration-options/
         input: {
-          'TheZecter_Customer/js/customer': `${env.mobileTsx}/TheZecter_Customer/customer.tsx`,
-          'TheZecter_Product/js/product': `${env.mobileTsx}/TheZecter_Product/product.tsx`
+          'TheZecter_Customer/js/customer': `${mobileTsx}/TheZecter_Customer/customer.tsx`,
+          'TheZecter_Product/js/product': `${mobileTsx}/TheZecter_Product/product.tsx`
         },
         output: {
-          dir: env.mobileTheme,
+          dir: mobileTheme,
           entryFileNames: `[name].js`,
         }
       }
