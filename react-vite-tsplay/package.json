@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build": "tsc && vite build",
     "dev": "vite",
     "build-default": "tsc && vite --config vite.config.default.ts build",
     "build-mobile": "tsc && vite --config vite.config.mobile.ts build",
